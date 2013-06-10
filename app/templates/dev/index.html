@@ -2,26 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Test Suite</title>
-  <!-- Load local QUnit. -->
-  <link rel="stylesheet" href="../components/qunit/qunit.css" media="screen">
-  <script src="../components/qunit/qunit.js"></script>
-  <script>
-    QUnit.config.autostart = false;
-  </script>
-
-  <script data-main="../app/config" src="../components/requirejs/require.js"></script> 
-  <script>
-    window.requireTestMode = true;
-    require.config({
-      deps: ["tests.js"]
-    });
+  <title><%= _.slugify(appName) %></title>
+  <script src="scripts/libs/require-jquery.min.js" main-data="main"></script>
   </script>
 </head>
 <body>
-  <div id="qunit"></div>
-  <div id="qunit-fixture">
-    <!-- fixtures go here -->
-  </div>
+    
 </body>
 </html>
