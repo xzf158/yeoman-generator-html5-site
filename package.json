@@ -1,0 +1,37 @@
+{
+  "name": "generator-html5-site",
+  "version": "0.3.0",
+  "description": "html5 web site generator",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/xzf158/yeoman-generator-html5-site",
+  "bugs": "https://github.com/xzf158/yeoman-generator-html5-site/issues",
+  "author": {
+    "name": "terry xu",
+    "email": "terry.xu@me.com",
+    "url": "https://github.com/xzf158"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xzf158/yeoman-generator-html5-site.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.10.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.9.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
