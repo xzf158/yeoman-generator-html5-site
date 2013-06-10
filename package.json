@@ -7,11 +7,7 @@
   ],
   "homepage": "https://github.com/xzf158/yeoman-generator-html5-site",
   "bugs": "https://github.com/xzf158/yeoman-generator-html5-site/issues",
-  "author": {
-    "name": "terry xu",
-    "email": "terry.xu@me.com",
-    "url": "https://github.com/xzf158"
-  },
+  "author": "terry xu <terry.xu@me.com> (https://github.com/xzf158)",
   "main": "app/index.js",
   "repository": {
     "type": "git",
@@ -33,5 +29,10 @@
     {
       "type": "MIT"
     }
-  ]
+  ],
+  "readmeFilename": "README.md",
+  "directories": {
+    "test": "test"
+  },
+  "license": "BSD"
 }
