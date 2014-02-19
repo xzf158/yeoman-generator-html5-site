@@ -4,7 +4,7 @@ A simple generator for Yeoman.
 ## Getting started
 - Make sure you have [yo](https://github.com/yeoman/yo) installed:
     `npm install -g yo`
-- Install the generator **locally**: `npm install generator-html5-site`
+- Install the generator **locally**: `npm install -g generator-html5-site`
 - Run: `yo html5-site`
 
 ## License

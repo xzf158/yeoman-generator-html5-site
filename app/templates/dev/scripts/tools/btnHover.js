@@ -16,6 +16,7 @@ define(["jquery", "libs/class"], function($, Class) {
             target : "self",
             renderType : "canvas",
             hasTouch : false,
+            hasTranslate3d : $("html").hasClass('csstransforms3d')
         },
         _currentIndex : 0,
         _timeoutId : undefined,
@@ -88,9 +89,16 @@ define(["jquery", "libs/class"], function($, Class) {
             var scope = this;
             if (scope.options.d == "h") {
                 if (this.options.renderType == "canvas") {
-                    scope.render.css({
-                        transform : "translate(" + ((this.options.sp + this._currentIndex * this.options.stepSize) + this.options.unit) + ",0px)",
-                    });
+                    if (this.options.hasTranslate3d) {
+                        scope.render.css({
+                            transform : "translate3d(" + ((this.options.sp + this._currentIndex * this.options.stepSize) + this.options.unit) + ",0px,0)",
+                        });
+                    } else {
+                        scope.render.css({
+                            transform : "translate(" + ((this.options.sp + this._currentIndex * this.options.stepSize) + this.options.unit) + ",0px)",
+                        });
+                    }
+
                 } else {
                     scope.render.css({
                         top : 0,
@@ -102,9 +110,15 @@ define(["jquery", "libs/class"], function($, Class) {
                 }
             } else {
                 if (this.options.renderType == "canvas") {
-                    scope.render.css({
-                        transform : "translate(0px," + ((this.options.sp + this._currentIndex * this.options.stepSize) + this.options.unit) + ")"
-                    });
+                    if (this.options.hasTranslate3d) {
+                        scope.render.css({
+                            transform : "translate3d(0px," + ((this.options.sp + this._currentIndex * this.options.stepSize) + this.options.unit) + ",0)"
+                        });
+                    } else {
+                        scope.render.css({
+                            transform : "translate(0px," + ((this.options.sp + this._currentIndex * this.options.stepSize) + this.options.unit) + ")"
+                        });
+                    }
                 } else {
                     scope.render.css({
                         left : 0,

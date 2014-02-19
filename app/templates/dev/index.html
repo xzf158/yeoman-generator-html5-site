@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title><%= _.slugify(appName) %></title>
-  <script src="scripts/libs/require-jquery.min.js" main-data="main"></script>
-  </script>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>Nick-Spongeob/Toyota</title>
+<!--         <link rel="stylesheet" type="text/css" href="styles/main.css"> -->
+        <!--[if IE 8]>
+        <script src="scripts/libs/html5.js" type="text/javascript"></script>
+        <script src="scripts/libs/css3-mediaqueries.js" type="text/javascript" ></script>
+        <script src="scripts/libs/PIE/PIE.js" type="text/javascript"></script>
+        <![endif]-->
+        <script type="text/javascript" src="scripts/libs/require-jquery.min.js" data-main="scripts/config"></script>
+        <script type="text/javascript" src="scripts/tracking.js"></script>
+    </head>
+    <body>
+        <div id="loading">
+        </div>
+        <div id="wrapper">
+            <nav>
+                <ul>
+                    <li id="nav-home">
+                        <span class="preload" data-img-src="navigation-ico1.png" data-fill-mode="bg"></span>
+                        <span class="menu-text">HOME</span>
+                    </li>
+                    <li id="nav-design-your-own">
+                        <span class="preload" data-img-src="navigation-ico2.png" data-fill-mode="bg"></span>
+                        <span class="menu-text">DESIGN YOUR OWN</span>
+                    </li>
+                    <li id="nav-showroom">
+                        <span class="preload" data-img-src="navigation-ico3.png" data-fill-mode="bg"></span>
+                        <span class="menu-text">THE HIGHLANDER SHOWROOM</span>
+                    </li>
+                    <li id="nav-drive-happy-kit">
+                        <span class="preload" data-img-src="navigation-ico7.png" data-fill-mode="bg"></span>
+                        <span class="menu-text">DRIVE HAPPY KIT</span>
+                    </li>
+                    <li id="nav-games">
+                        <span class="preload" data-img-src="navigation-ico4.png" data-fill-mode="bg"></span>
+                        <span class="menu-text">GAMES</span>
+                    </li>
+                    <li id="nav-videos">
+                        <span class="preload" data-img-src="navigation-ico5.png" data-fill-mode="bg"></span>
+                        <span class="menu-text">VIDEOS</span>
+                    </li>
+                </ul>
+            </nav>
+    </body>
 </html>

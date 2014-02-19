@@ -119,7 +119,13 @@ define(["jquery", "jquery.easing", "browser.animation"], function($) {
             }
 
         }
-        scheme.$window.scroll(function(e) {
+        if (scheme.ie8) {
+            scheme.$window.scroll(bodyScrollEvnent);
+        } else {
+            scheme.$document.on('scroll', bodyScrollEvnent);
+        }
+
+        function bodyScrollEvnent(e) {
             if (scheme.isDragScroll) {
                 scheme.targetTop = $(this).scrollTop();
             }
@@ -134,7 +140,7 @@ define(["jquery", "jquery.easing", "browser.animation"], function($) {
                     }
                 }
             }
-        });
+        }
 
         if (scheme.options.mousewheel && !scheme.ie8 && !scheme.hasTouch) {
             scheme.targetTop = scheme.$document.scrollTop();
@@ -142,7 +148,6 @@ define(["jquery", "jquery.easing", "browser.animation"], function($) {
             animationLoop();
             scheme.tmpScroll = $("<div/>");
         }
-
         scheme.currentTop = scheme.targetTop = scheme.$document.scrollTop();
     }
 
